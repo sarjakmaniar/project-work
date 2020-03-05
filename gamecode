@@ -1,0 +1,31 @@
+# Guess the number game
+
+# no of guesses -> 9
+# print no of guesses left
+# No of guesses he took to finish
+# game over
+
+# code
+
+print("Enter you name:")
+name = input()
+name = name.upper()
+print("WELCOME",name,"TO THE GUESS GAME")
+n = 18
+number_of_guesses = 1
+print("TOTAL NUMBER OF GUESSES YOU HAVE -> 9")
+while(number_of_guesses <= 9):
+    guess_number = int(input("Guess the number:\n"))
+    if guess_number < 18:
+        print("You guessed a lesser number.Plz input greater number.\n")
+    elif guess_number > 18:
+        print("You guessed a greater number.Plz input lesser number.\n")
+    else:
+        print("You Won!\n")
+        print("Number of guesses you took to finish ->", number_of_guesses)
+        break
+    print("Number of guesses left ->", 9-number_of_guesses)
+    number_of_guesses = number_of_guesses + 1
+if(number_of_guesses > 9):
+    print("Game Over!")
+
